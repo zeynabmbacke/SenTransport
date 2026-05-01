@@ -1,22 +1,26 @@
 import './Header.css';
 
+
 function Header() {
 
-    return (
+  const dateAujourdhui = new Date().toLocaleDateString('fr-FR');
+  
+  return (
 
-        <header className ="header">
+    <header className="header">
 
-            <h1 className ="header-titre">SenTransport</h1>
-            
-            <p className ="header-soustitre">
+      <h1 className="header-titre">SenTransport</h1>
 
-                Votre guide du transport en commun à Dakar
+      <p className="header-soustitre">
 
-            </p>
+        Votre guide du transport en commun à Dakar
 
-        </header>
-    );
+      </p>
 
+      <p className="header-date">{dateAujourdhui}</p>
+      
+    </header>
+  );
 }
 
 export default Header;
